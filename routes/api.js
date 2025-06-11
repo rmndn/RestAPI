@@ -22,9 +22,9 @@ const BitlyClient = require('bitly').BitlyClient
 const { fetchJson, getBuffer } = require(__path + '/lib/myfunc')
 const isNumber = require('is-number');
 const router = express.Router()
-const ryzen = require("../lib/listdl")
+const arjun = require("../lib/listdl")
 var error = __path + '/view/error.html'
-let creator = 'Shirokami Ryzen'
+let creator = 'Ryzen'
 loghandler = {
 	error: {
 		status: false,
@@ -1410,7 +1410,7 @@ router.get('/tools/ssweb', async (req, res) => {
 	if (!text) return res.json(loghandler.noturl)
 	let islink = isUrl(text)
 	if (!islink) return res.json({ message: "use https://" })
-	ryzen.ssweb(text)
+	arjun.ssweb(text)
 		.then((data) => {
 			if (!data) return res.json(loghandler.error)
 			res.set({ 'Content-Type': 'image/png' })
@@ -1423,7 +1423,7 @@ router.get('/tools/textstyle', async (req, res) => {
 	let text = req.query.text
 	if (!text) return res.json(loghandler.nottext)
 	let text1 = shortText(text, 10000)
-	ryzen.styletext(text1)
+	arjun.styletext(text1)
 		.then((data) => {
 			if (!data) return res.json(loghandler.error)
 			res.json({
