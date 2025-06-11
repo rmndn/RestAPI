@@ -1,7 +1,7 @@
 {
   "name": "rest-api",
   "version": "1.0.0",
-  "description": "Ryzen rest API",
+  "description": "Arjun rest API",
   "main": "main.js",
   "type": "commonjs",
   "scripts": {
@@ -14,7 +14,7 @@
   "keywords": [
     "Express"
   ],
-  "author": "Shirokami Ryzen",
+  "author": "Ryzen",
   "license": "ISC",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
